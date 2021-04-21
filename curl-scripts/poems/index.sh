@@ -1,7 +1,7 @@
 #!/bin/sh
 
 API="http://localhost:4741"
-URL_PATH="/examples"
+URL_PATH="/poems"
 
 curl "${API}${URL_PATH}" \
   --include \
@@ -9,3 +9,5 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Bearer ${TOKEN}"
 
 echo
+
+# TOKEN=ceb4d23e081729d3748fd1541bdb8429
