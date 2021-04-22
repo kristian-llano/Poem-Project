@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API="http://localhost:4741"
+API="https://git.heroku.com/radiant-waters-81924.git"
 URL_PATH="/sign-in"
 
 curl "${API}${URL_PATH}" \
@@ -10,7 +10,7 @@ curl "${API}${URL_PATH}" \
   --data '{
     "credentials": {
       "email": "'"${EMAIL}"'",
-      "password": "'"${PASSWORD}"'"
+      "password": "'"${PW}"'"
     }
   }'
 
