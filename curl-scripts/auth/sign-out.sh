@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API="https://git.heroku.com/radiant-waters-81924.git"
+API="https://radiant-waters-81924.herokuapp.com"
 URL_PATH="/sign-out"
 
 curl "${API}${URL_PATH}/" \
