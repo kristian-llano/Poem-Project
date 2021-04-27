@@ -1,11 +1,12 @@
 #!/bin/sh
 
-API="https://git.heroku.com/radiant-waters-81924.git"
+API="https://radiant-waters-81924.herokuapp.com"
 URL_PATH="/poems"
 
 curl "${API}${URL_PATH}" \
   --include \
   --request GET \
+  --header "Content-Type: application/json" \
   --header "Authorization: Bearer ${TOKEN}"
 
 echo

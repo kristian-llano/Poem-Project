@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API="https://git.heroku.com/radiant-waters-81924.git"
+API="https://radiant-waters-81924.herokuapp.com"
 URL_PATH="/poems"
 
 curl "${API}${URL_PATH}/${ID}" \
@@ -10,7 +10,6 @@ curl "${API}${URL_PATH}/${ID}" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
     "poem": {
-      "_id": "'"${ID}"'",
       "title": "'"${TITLE}"'",
       "body": "'"${TEXT}"'"
     }
