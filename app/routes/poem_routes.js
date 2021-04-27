@@ -9,7 +9,7 @@ const customErrors = require('../../lib/custom_errors')
 const requireOwnership = customErrors.requireOwnership
 
 router.post('/poems', requireToken, (req, res, next) => {
-  req.body.poem.owner = req.user.id
+  req.body.poem.owner = req.owner.id
   Poem.create(req.body.poem)
     .then(poem => {
       res.status(201).json({ poem: poem.toObject() })
@@ -18,7 +18,7 @@ router.post('/poems', requireToken, (req, res, next) => {
 })
 
 router.get('/poems', requireToken, (req, res, next) => {
-  const id = req.user.id
+  const id = req.owner.id
   Poem.find({ owner: id })
     .then(poems => {
       return poems.map(poem => poem.toObject())
@@ -50,7 +50,7 @@ router.delete('/poems/:id', requireToken, (req, res, next) => {
     .catch(next)
 })
 // use requireToken
-// only return the events that are owned by the user making the request (will need to use token)
+// only return the events that are owned by the owner making the request (will need to use token)
 // return events to client
 // (dont forget curl script)
 
