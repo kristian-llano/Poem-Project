@@ -1,11 +1,10 @@
 # Poem Project
 
-This application allows the user to sign up a new account, log in to the new account, and post and read Poems!
+This application allows the user to sign up a new account, log in to the new account, sign-out of the account,
+change the account's password, as well as post and read Poems!
 
 ## Deployed Application
-
-
-## Planning
+https://kristian-llano.github.io/Poem-Project-Client/
 
 ### User Stories
 
